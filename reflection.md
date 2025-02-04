@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name:  Kiritu Gachuki
+Sudent Email:  kgachuki@syr.edu
 
 ## Instructions
 
@@ -23,3 +23,4 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+In this assignment, I learned how to write functions to do various tasks, with the primary function parsing lines from a text file. I also learned how to take that data and dump it to a json file, using the json module while opening and writing to files. The part I struggled with the most was the string parsing, and it took me multiple attempts to get the right output and pass the tests. I might need to spend more time working with the string methods and how to properly tokenize them.

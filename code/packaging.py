@@ -18,7 +18,21 @@ def parse_packaging(packaging_data: str) -> list[dict]:
     input: "20 pieces in 1 pack / 10 packs in 1 carton / 4 cartons in 1 box"
     output: [{ 'pieces' : 20}, {'packs' : 10}, {'carton' : 4}, {'box' : 1}]
     '''
-    pass # TODO: Replace this line and write code
+    package_data = []  # Storing parsed data
+
+    for string in packaging_data.split("/"):
+        string1 = string.split(" in ")[0] # splits into 12 eggs, 1 carton, stores first element
+        item = string1.split()[1] # gets item (eggs)
+        count = int(string1.split()[0]) # gets number (12)
+        package_data.append({item:count})
+
+       
+    string2 = string.split(" in ")[1] # 1 carton
+    item2 = string2.split()[1] # carton
+    count2 = int(string2.split()[0]) # 1
+    package_data.append({item2:count2}) 
+
+    return package_data
 
 
 def calc_total_units(package: list[dict]) -> int:
@@ -34,6 +48,11 @@ def calc_total_units(package: list[dict]) -> int:
     output: 800 (e.g. 20*10*4*1)
     '''
     pass # TODO: Replace this line and write code
+    total = 1
+    for i in package:
+        total = total * list(i.values())[0] # Take values from dictionary into list, reads value
+
+    return total
 
 
 def get_unit(package: list[dict]) -> str:
@@ -50,6 +69,10 @@ def get_unit(package: list[dict]) -> str:
 
     '''
     pass # TODO: Replace this line and write code
+    dict = package[0] # Gets first dictionary in package list
+    item = list(dict.keys())[0]
+
+    return item
 
 # This will only run from here, not when imported
 # # Use this for testing / debugging cases with the debugger
