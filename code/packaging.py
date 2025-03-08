@@ -47,7 +47,6 @@ def calc_total_units(package: list[dict]) -> int:
     input: [{ 'pieces' : 20}, {'packs' : 10}, {'carton' : 4}, {'box' : 1}]
     output: 800 (e.g. 20*10*4*1)
     '''
-    pass # TODO: Replace this line and write code
     total = 1
     for i in package:
         total = total * list(i.values())[0] # Take values from dictionary into list, reads value
@@ -68,7 +67,6 @@ def get_unit(package: list[dict]) -> str:
     output: pieces
 
     '''
-    pass # TODO: Replace this line and write code
     dict = package[0] # Gets first dictionary in package list
     item = list(dict.keys())[0]
 
